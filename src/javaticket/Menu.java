@@ -2877,8 +2877,8 @@ public class Menu extends javax.swing.JFrame {
 
         
         boolean userDeleted = false;
-        if (toDeletUser.equals("admin")) {
-            userDeleted = true;
+        if (usernameToDelete.equals("admin")) {
+            userDeleted = false;
                 JOptionPane.showMessageDialog(this, "Cannot delete admin user.");
             } else {
         for (HerenciaUserData user : users) {

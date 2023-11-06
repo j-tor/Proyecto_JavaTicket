@@ -81,7 +81,7 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("password");
 
-        UserPassword.setText("admin");
+        UserPassword.setText("supersecreto");
         UserPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UserPasswordActionPerformed(evt);

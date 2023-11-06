@@ -14,7 +14,7 @@ public class UserManager {
         
         users = new ArrayList<>();
         currentUser = null; 
-        registerUser("admin", "admin", "Administrador", "Admin User", 30);
+        registerUser("admin", "supersecreto", "Administrador", "Admin User", 30);
         
         
     }
