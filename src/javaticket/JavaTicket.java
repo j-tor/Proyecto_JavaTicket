@@ -17,6 +17,7 @@ public class JavaTicket {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //main1
            UserManager userManager = new UserManager();
            UserData currentuser = new UserData("username", "password", "Administrador"); // Replace with actual user data
            
