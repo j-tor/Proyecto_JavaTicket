@@ -12,13 +12,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EventManager {
-    public List<Event> eventos;  
+public  class EventManager {
+    public static List<Event> eventos = new ArrayList<>();  
     
-
-    public EventManager() {
-        eventos = new ArrayList<>(); 
-    }
 
     public void agregarEvento(Event evento) {
         eventos.add(evento); 
@@ -27,6 +23,12 @@ public class EventManager {
     public List<Event> getEventos() {
         return eventos; 
     }
+
+    public static void setEventos(List<Event> eventos) {
+        EventManager.eventos = eventos;
+    }
+    
+    
 
     public void eliminarEvento(Event evento) {
         eventos.remove(evento); 

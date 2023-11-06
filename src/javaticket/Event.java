@@ -12,16 +12,16 @@ import java.util.concurrent.TimeUnit;
  *
  * @author aleja
  */
-public class Event {
-    private int code;
-    private String title;
-    private double amount;
-    private String description;
+public abstract class Event {
+    public int code;
+    public String title;
+    public double amount;
+    public String description;
     public Calendar day;
-    private String eventType;
-    private EventCategory category;
-    private boolean isCancelled;
-    private String eventCategory;
+    public String eventType;
+    public EventCategory category;
+    public boolean isCancelled;
+    public String eventCategory;
 
     public Event(int code, String title, double amount, String description, Calendar day, String eventType, EventCategory category) {
         this.code = code;

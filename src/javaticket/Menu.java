@@ -20,11 +20,11 @@ public class Menu extends javax.swing.JFrame {
       private UserManager userManager; 
       private HerenciaUserData ex;
     
-      private Login logs;
-      private UserData currentUser;
-      private EventManager eventManager;
-      private EventHerencia eventh;
-      private Event even;
+      public Login logs;
+      public UserData currentUser;
+      public EventManager eventManager;
+      public EventHerencia eventh;
+      public Event even;
       
    
     
@@ -39,14 +39,14 @@ public class Menu extends javax.swing.JFrame {
         
         eventManager = new EventManager();
         
-        Calendar day = null;
-        even = new Event(1, "s", 10, "s", day, "s", EventCategory.RELIGIOSO);
-        eventh =  new EventHerencia(1, "xd", 100, "xd", day, "xd", EventCategory.DEPORTIVO, currentuser);
-        
+//        Calendar day = null;
+////        even = new Event(1, "s", 10, "s", day, "s", EventCategory.RELIGIOSO);
+////        eventh =  new EventHerencia(1, "xd", 100, "xd", day, "xd", EventCategory.DEPORTIVO, currentuser);
+////         eventh =  new EventHerencia(WIDTH, title, ABORT, description, day, eventType, EventCategory.DEPORTIVO, currentuser);
         
         
           
-//        this.eventh = herenciaUserData;
+//        this.eventh = EventHerencia;
          this.userManager = userManager;
          this.userManager = userManager;
          this.currentUser = currentuser;
@@ -241,7 +241,6 @@ public class Menu extends javax.swing.JFrame {
         showDeportivo1 = new javax.swing.JButton();
         showReligios1 = new javax.swing.JButton();
         showMusical1 = new javax.swing.JButton();
-        SaveEvent4 = new javax.swing.JButton();
         deportivo1 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         codeEditeDeportivo = new javax.swing.JTextField();
@@ -1929,17 +1928,6 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        SaveEvent4.setBackground(new java.awt.Color(255, 255, 255));
-        SaveEvent4.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        SaveEvent4.setForeground(new java.awt.Color(0, 51, 153));
-        SaveEvent4.setText("Save");
-        SaveEvent4.setBorderPainted(false);
-        SaveEvent4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SaveEvent4ActionPerformed(evt);
-            }
-        });
-
         deportivo1.setBackground(new java.awt.Color(0, 153, 153));
 
         jLabel14.setBackground(new java.awt.Color(0, 51, 102));
@@ -2344,9 +2332,7 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(showReligios1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(showMusical1)
-                        .addGap(18, 18, 18)
-                        .addComponent(SaveEvent4))
+                        .addComponent(showMusical1))
                     .addComponent(Religioso1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(deportivo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Musical1, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2357,7 +2343,6 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(editEventPLayout.createSequentialGroup()
                 .addGap(9, 9, 9)
                 .addGroup(editEventPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SaveEvent4)
                     .addComponent(showDeportivo1)
                     .addComponent(showReligios1)
                     .addComponent(showMusical1))
@@ -2585,12 +2570,6 @@ public class Menu extends javax.swing.JFrame {
          deportivo1.setVisible(false);
          Musical1.setVisible(true);
     }//GEN-LAST:event_showMusical1ActionPerformed
-
-    private void SaveEvent4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveEvent4ActionPerformed
-        // TODO add your handling code here:
-        
-        eventh.setHola( "hola");
-    }//GEN-LAST:event_SaveEvent4ActionPerformed
 
     private void codeEditMusicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codeEditMusicalActionPerformed
         // TODO add your handling code here:
@@ -2839,6 +2818,7 @@ public class Menu extends javax.swing.JFrame {
             String equipo1 = equipo1EventDeportivo.getText();
             String equipo2 = equipo2EventDeportivo.getText();
             Calendar day = eventdayDeportivo.getCalendar();
+            UserData createduser = userManager.getCurrentUser();
             
             java.util.Date selectedDate = eventdayDeportivo.getDate();
             String fecha;
@@ -2870,7 +2850,7 @@ public class Menu extends javax.swing.JFrame {
                     return;
                 }
             }   
-            EventHerencia event = new EventHerencia(code, title, amount, description, day, eventType, eventCategory, currentUser);
+            EventHerencia event = new EventHerencia(code, title, amount, description, day, eventType, eventCategory, createduser);
             event.setEquipo1(equipo1);
             event.setEquipo2(equipo2);
             eventManager.getEventos().add(event);           
@@ -2986,7 +2966,7 @@ public class Menu extends javax.swing.JFrame {
                 }
             }   
 
-            Event event = new Event(code, title, amount, description, day, eventType, eventCategory.RELIGIOSO);
+            Event event = new Event(code, title, amount, description, day, eventType, eventCategory.RELIGIOSO) {};
 
             eventManager.getEventos().add(event);
             titleEventReligioso.setText("");
@@ -3043,7 +3023,7 @@ public class Menu extends javax.swing.JFrame {
                 
 
 
-            Event event = new Event(code, title, amount, description, day, eventType, eventCategory.MUSICAL);
+            Event event = new Event(code, title, amount, description, day, eventType, eventCategory.MUSICAL) {};
 
             eventManager.getEventos().add(event);
             titleEventMusical.setText("");
@@ -3068,6 +3048,8 @@ public class Menu extends javax.swing.JFrame {
                 String newDescription = descripcionEditDeportivo.getText();
                 Calendar newDay = editeventdayDeportivo.getCalendar();
                 String newEventType = tipodeEditDeportivo.getSelectedItem().toString();
+               UserData createduser = eventh.getCurrentUser();
+
                 double newAmount;
                 
                 java.util.Date selectedDate = editeventdayDeportivo.getDate();
@@ -3098,7 +3080,7 @@ public class Menu extends javax.swing.JFrame {
                   List<String> newJugadoresEquipo2 = new ArrayList<>();
                 for (Event evento : eventManager.getEventos()) {
                     if (evento.getCode() == newCode) {
-                if (evento instanceof EventHerencia || eventh.getCurrentUser().equals(currentUser) && evento.getEventType().equals(EventCategory.DEPORTIVO)) {
+                if (evento instanceof EventHerencia || !eventh.getCurrentUser().equals(currentUser) && evento.getEventType().equals(EventCategory.DEPORTIVO)) {
                         evento.setTitle(newTitle);
                         evento.setDescription(newDescription);
                         evento.setDay(newDay);
@@ -3732,7 +3714,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton SaveEditDeportivo;
     private javax.swing.JButton SaveEditMusical;
     private javax.swing.JButton SaveEditReligioso;
-    private javax.swing.JButton SaveEvent4;
     private javax.swing.JButton SaveEventDeportivo;
     private javax.swing.JButton SaveEventMusical;
     private javax.swing.JButton SaveEventReligioso;

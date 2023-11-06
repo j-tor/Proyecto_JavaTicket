@@ -13,15 +13,15 @@ import javax.swing.JOptionPane;
  *
  * @author aleja
  */   
-public class EventHerencia extends Event {
+public class  EventHerencia extends Event {
     private String Hola;
     private String equipo1;
     private String equipo2;    
     private UserData currentUser;
     private List<Event> equipo1Players;
     private List<Event> equipo2Players;
-    private List<Event> equi1; // Lista de jugadores del Equipo 1
-    private List<Event> equi2; // Lista de jugadores del Equipo 2
+    private List<Event> equi1; 
+    private List<Event> equi2; 
     private List<String> addPlayerToEquipo1;
     private List<String> addPlayerToEquipo2;
 
@@ -71,7 +71,7 @@ public class EventHerencia extends Event {
     }
     
 
-    // Métodos para agregar jugadores a los equipos
+    
     public void addPlayerToEquipo1(List<String> player) {
         this.addPlayerToEquipo1=player;
 

@@ -2799,8 +2799,6 @@
                               <Component id="showReligios1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="showMusical1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="SaveEvent4" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="Religioso1" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="deportivo1" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -2815,7 +2813,6 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="SaveEvent4" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="showDeportivo1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="showReligios1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="showMusical1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2854,24 +2851,6 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="showMusical1ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="SaveEvent4">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI Black" size="12" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="99" green="33" red="0" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Save"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SaveEvent4ActionPerformed"/>
               </Events>
             </Component>
             <Container class="javax.swing.JPanel" name="deportivo1">

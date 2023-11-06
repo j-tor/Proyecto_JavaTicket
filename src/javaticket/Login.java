@@ -6,7 +6,10 @@ package javaticket;
 
 import java.text.SimpleDateFormat;
 import java.time.Clock;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
+import static javaticket.EventManager.eventos;
 
 import javax.swing.JOptionPane;
 
@@ -15,10 +18,12 @@ import javax.swing.JOptionPane;
  * @author aleja
  */
 public class Login extends javax.swing.JFrame {
-   private UserManager userManager;
-   private EventManager eventManager;
-   private Menu menu;
-   private EventHerencia eventh;
+   public UserManager userManager;
+   public EventManager eventManager;
+   public Menu menu;
+   public EventHerencia eventh;
+   EventManager event;
+   public static List<Event> seventos;  
 
     /**
      * Creates new form Login
@@ -26,26 +31,15 @@ public class Login extends javax.swing.JFrame {
      * @param menu
      */
     public Login(UserManager userManager,Menu menu,EventManager eventManager) {
+        event=new EventManager();      
         this.userManager = userManager;
         this.eventManager = eventManager;
         this.menu = menu;
-        Calendar day = null;
-       UserData currentuser = null;
-                eventh =  new EventHerencia(1, "xd", 100, "xd", day, "xd", EventCategory.DEPORTIVO, currentuser);
-
-        
-
         initComponents();
-        
-        
-        
-        
-        
+               
     }
 
-    Login(UserManager userManager) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -219,36 +213,7 @@ public class Login extends javax.swing.JFrame {
             
            
             menu = new Menu(userManager, currentUser);
-             System.out.println("Lista de Eventos:");
-        for (Event evento : eventManager.getEventos()) {
-               currentUser = ((EventHerencia) evento).getCurrentUser();
-            System.out.println("Código: " + evento.getCode());
-            System.out.println("Título: " + evento.getTitle());
-            System.out.println("Descripción: " + evento.getDescription());
-            System.out.println("Fecha: " + new SimpleDateFormat("yyyy-MM-dd").format(evento.getDay().getTime()));
-            System.out.println("Estado: " + (evento.isCancelled() ? "Cancelado" : "Activo"));
-            System.out.println("Categoría: " + evento.getCategory());
-            System.out.println("Tipo de Evento: " + evento.getEventType());
-            System.out.println("Usuario Creador: " + currentUser.getUsername());
-
-            if (evento instanceof EventHerencia) {
-                
-                EventHerencia eventoHerencia = (EventHerencia) evento;
-                System.out.println("Equipo 1: " + eventoHerencia.getEquipo1());
-                System.out.println("Equipo 2: " + eventoHerencia.getEquipo2());
-                System.out.println("Jugadores del Equipo 1:");
-                for (Event player : eventoHerencia.getEquipo1Players()) {
-                    System.out.println(player.getTitle());
-                }
-                System.out.println("Jugadores del Equipo 2:");
-                for (Event player : eventoHerencia.getEquipo2Players()) {
-                    System.out.println(player.getTitle());
-                }
-            }
-
-            System.out.println();  // Separador entre eventos
-        }
-        
+      
             menu.setVisible(true);
            
         } else {
