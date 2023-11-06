@@ -57,5 +57,5 @@ public class UserManager {
     public void setCurrentUser(UserData currentUser) {
         this.currentUser = currentUser;
     }
-//  
+  
 }

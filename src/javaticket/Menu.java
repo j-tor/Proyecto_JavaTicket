@@ -95,7 +95,6 @@ public class Menu extends javax.swing.JFrame {
         A = new javax.swing.JButton();
         R = new javax.swing.JButton();
         exit1 = new javax.swing.JButton();
-        s = new javax.swing.JButton();
         menuReportes = new javax.swing.JPanel();
         menuuserP1 = new javax.swing.JPanel();
         EventsDone = new javax.swing.JButton();
@@ -287,6 +286,7 @@ public class Menu extends javax.swing.JFrame {
         SaveEditMusical = new javax.swing.JButton();
         editeventdayMusical = new com.toedter.calendar.JDateChooser();
         jLabel51 = new javax.swing.JLabel();
+        newJugadoresEquipo3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(760, 600));
@@ -308,7 +308,7 @@ public class Menu extends javax.swing.JFrame {
         A.setBackground(new java.awt.Color(0, 102, 153));
         A.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         A.setForeground(new java.awt.Color(255, 255, 255));
-        A.setText("A");
+        A.setText("E");
         A.setBorderPainted(false);
         A.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -337,17 +337,6 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        s.setBackground(new java.awt.Color(0, 102, 153));
-        s.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        s.setForeground(new java.awt.Color(255, 255, 255));
-        s.setText("s");
-        s.setBorderPainted(false);
-        s.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout menubarLayout = new javax.swing.GroupLayout(menubar);
         menubar.setLayout(menubarLayout);
         menubarLayout.setHorizontalGroup(
@@ -358,7 +347,6 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(menubarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(s, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
                     .addComponent(R, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
                     .addComponent(U, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(A, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -373,9 +361,7 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(U, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(R, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(s, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 218, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 280, Short.MAX_VALUE)
                 .addComponent(exit1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(66, 66, 66))
         );
@@ -2253,6 +2239,18 @@ public class Menu extends javax.swing.JFrame {
         jLabel51.setForeground(new java.awt.Color(255, 255, 255));
         jLabel51.setText("Date:");
 
+        newJugadoresEquipo3.setBackground(new java.awt.Color(255, 255, 255));
+        newJugadoresEquipo3.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        newJugadoresEquipo3.setForeground(new java.awt.Color(0, 51, 153));
+        newJugadoresEquipo3.setText("+");
+        newJugadoresEquipo3.setBorderPainted(false);
+        newJugadoresEquipo3.setContentAreaFilled(false);
+        newJugadoresEquipo3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newJugadoresEquipo3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout Musical1Layout = new javax.swing.GroupLayout(Musical1);
         Musical1.setLayout(Musical1Layout);
         Musical1Layout.setHorizontalGroup(
@@ -2260,33 +2258,36 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(Musical1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(Musical1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Musical1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(Musical1Layout.createSequentialGroup()
-                            .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(montoEditMusical, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(Musical1Layout.createSequentialGroup()
-                            .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(codeEditMusical, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(Musical1Layout.createSequentialGroup()
-                            .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(titleEditMusical, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(Musical1Layout.createSequentialGroup()
-                            .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(descripcionEditMusical, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(Musical1Layout.createSequentialGroup()
-                            .addGroup(Musical1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(Musical1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(editeventdayMusical, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(tipodeEditMusical, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(Musical1Layout.createSequentialGroup()
+                        .addGroup(Musical1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(Musical1Layout.createSequentialGroup()
+                                .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(montoEditMusical, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(Musical1Layout.createSequentialGroup()
+                                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(codeEditMusical, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(Musical1Layout.createSequentialGroup()
+                                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(titleEditMusical, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(Musical1Layout.createSequentialGroup()
+                                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(descripcionEditMusical, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(Musical1Layout.createSequentialGroup()
+                                .addGroup(Musical1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(Musical1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(editeventdayMusical, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(tipodeEditMusical, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(newJugadoresEquipo3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(SaveEditMusical, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(319, Short.MAX_VALUE))
+                .addGap(303, 303, 303))
         );
         Musical1Layout.setVerticalGroup(
             Musical1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2306,7 +2307,8 @@ public class Menu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(Musical1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(descripcionEditMusical, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(descripcionEditMusical, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(newJugadoresEquipo3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(Musical1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2374,7 +2376,7 @@ public class Menu extends javax.swing.JFrame {
         menutableLayout.setVerticalGroup(
             menutableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(menuEventP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(addEventP, javax.swing.GroupLayout.DEFAULT_SIZE, 1178, Short.MAX_VALUE)
+            .addComponent(addEventP, javax.swing.GroupLayout.PREFERRED_SIZE, 1178, Short.MAX_VALUE)
             .addGroup(menutableLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(menutableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2510,8 +2512,7 @@ public class Menu extends javax.swing.JFrame {
                             "Equipo 1: " + eventoHerencia.getEquipo1() + "\nEquipo 2: " + eventoHerencia.getEquipo2() + "\n" +
                             "UserCreator:" + currentUser.getUsername();
                     }
-
-                   
+                  
                     seearea.setText(eventData);
                     return;
                 }
@@ -2818,7 +2819,7 @@ public class Menu extends javax.swing.JFrame {
             String equipo1 = equipo1EventDeportivo.getText();
             String equipo2 = equipo2EventDeportivo.getText();
             Calendar day = eventdayDeportivo.getCalendar();
-            UserData createduser = userManager.getCurrentUser();
+            HerenciaUserData createduser ;
             
             java.util.Date selectedDate = eventdayDeportivo.getDate();
             String fecha;
@@ -2850,9 +2851,10 @@ public class Menu extends javax.swing.JFrame {
                     return;
                 }
             }   
-            EventHerencia event = new EventHerencia(code, title, amount, description, day, eventType, eventCategory, createduser);
+            EventHerencia event = new EventHerencia(code, title, amount, description, day, eventType, eventCategory, currentUser);
             event.setEquipo1(equipo1);
             event.setEquipo2(equipo2);
+            event.setCurrentUser(currentUser);
             eventManager.getEventos().add(event);           
             titleEventDeportivo.setText("");
             montoEventDeportivo.setText("");
@@ -3048,7 +3050,7 @@ public class Menu extends javax.swing.JFrame {
                 String newDescription = descripcionEditDeportivo.getText();
                 Calendar newDay = editeventdayDeportivo.getCalendar();
                 String newEventType = tipodeEditDeportivo.getSelectedItem().toString();
-               UserData createduser = eventh.getCurrentUser();
+//               UserData createduser = eventh.getCurrentUser();
 
                 double newAmount;
                 
@@ -3287,22 +3289,6 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_titleEditMusicalActionPerformed
 
-    private void sActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sActionPerformed
-        // TODO add your handling code here:
-        
-        
-    if (currentUser != null) {
-    // Imprime los datos del usuario
-        System.out.println("Datos del usuario actual:");
-        System.out.println("Nombre de usuario: " + currentUser.getUsername());
-        System.out.println("password: " + currentUser.getPassword());
-        System.out.println("Tipo: " + currentUser.getUserType());
-        } else {
-        System.out.println("no hay usario actual "+userManager);
-    }
-    
-    }//GEN-LAST:event_sActionPerformed
-
     private void newJugadoresEquipo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newJugadoresEquipo2ActionPerformed
         String Sjugadores1 = JOptionPane.showInputDialog("Ingrese la cantidad de jugadores del Equipo 1");
         int jugadores1 = Integer.parseInt(Sjugadores1);
@@ -3312,7 +3298,7 @@ public class Menu extends javax.swing.JFrame {
         for (int i = 0; i < jugadores1; i++) {
             String jugador = JOptionPane.showInputDialog("Ingrese el nombre de jugador número " + (i + 1));
             newJugadoresEquipo2.add(jugador);
-            eventh.setAddPlayerToEquipo2(newJugadoresEquipo2);
+//            eventh.setAddPlayerToEquipo2(newJugadoresEquipo2);
 //              
 
         }
@@ -3329,7 +3315,7 @@ public class Menu extends javax.swing.JFrame {
             String jugador = JOptionPane.showInputDialog("Ingrese el nombre de jugador número " + (i + 1));
               
             newJugadoresEquipo1.add(jugador);
-            eventh.setAddPlayerToEquipo2(newJugadoresEquipo1);
+//            eventh.setAddPlayerToEquipo2(newJugadoresEquipo1);
               
               
         }
@@ -3640,6 +3626,22 @@ public class Menu extends javax.swing.JFrame {
         UserDataP.setVisible(false);
     }//GEN-LAST:event_FutureEventsActionPerformed
 
+    private void newJugadoresEquipo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newJugadoresEquipo3ActionPerformed
+        // TODO add your handling code here:
+         String Sjugadores1 = JOptionPane.showInputDialog("Ingrese la cantidad de Instrumentos");
+        int jugadores1 = Integer.parseInt(Sjugadores1);
+
+        List<String> newJugadoresEquipo1 = new ArrayList<>();
+        for (int i = 0; i < jugadores1; i++) {
+            String jugador = JOptionPane.showInputDialog("Ingrese el nombre de instrumento número " + (i + 1));
+              
+            newJugadoresEquipo1.add(jugador);
+//            eventh.setAddPlayerToEquipo2(newJugadoresEquipo1);
+              
+              
+        }
+    }//GEN-LAST:event_newJugadoresEquipo3ActionPerformed
+
    
     
     
@@ -3850,8 +3852,8 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField montoEventReligioso;
     private javax.swing.JButton newJugadoresEquipo1;
     private javax.swing.JButton newJugadoresEquipo2;
+    private javax.swing.JButton newJugadoresEquipo3;
     private javax.swing.JPanel passEventP;
-    private javax.swing.JButton s;
     private javax.swing.JButton searchEditUser;
     private javax.swing.JPanel seeEventP;
     private javax.swing.JTextArea seearea;
